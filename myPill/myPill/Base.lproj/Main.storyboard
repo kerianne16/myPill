@@ -127,7 +127,7 @@
         <!--settings-->
         <scene sceneID="5yz-lc-EnV">
             <objects>
-                <viewController id="26b-HY-n9W" sceneMemberID="viewController">
+                <viewController id="26b-HY-n9W" customClass="ThemeSettingsViewController" customModule="myPill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NBQ-Sh-Rxy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,22 +141,28 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BsS-Sm-G8J">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BsS-Sm-G8J">
                                         <rect key="frame" x="80.5" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="selectPinkTheme:" destination="26b-HY-n9W" eventType="valueChanged" id="rww-OC-ol1"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="Rga-OT-9EC">
                                 <rect key="frame" x="141" y="325" width="129.5" height="31"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Black" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nF-yW-VtQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nF-yW-VtQ">
                                         <rect key="frame" x="0.0" y="0.0" width="39.5" height="31"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hph-bH-5V7">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hph-bH-5V7">
                                         <rect key="frame" x="80.5" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="selectDarkTheme:" destination="26b-HY-n9W" eventType="valueChanged" id="NIw-eE-mmH"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
@@ -169,8 +175,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftO-vs-71v">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ftO-vs-71v">
                                         <rect key="frame" x="80.5" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="selectWhiteTheme:" destination="26b-HY-n9W" eventType="valueChanged" id="Cek-Lz-RCl"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>

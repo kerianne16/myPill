@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		4E0AC87123E9D68000A3F802 /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AC87023E9D68000A3F802 /* ThemeHelper.swift */; };
 		4E0AC87423E9D76600A3F802 /* ThemeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AC87323E9D76600A3F802 /* ThemeSettingsViewController.swift */; };
+		4E0AC87623EA0A2D00A3F802 /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AC87523EA0A2D00A3F802 /* WeekdaysView.swift */; };
+		4E0AC87823EA0A5700A3F802 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AC87723EA0A5700A3F802 /* CalendarView.swift */; };
+		4E0AC87A23EA0B5A00A3F802 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AC87923EA0B5A00A3F802 /* MonthView.swift */; };
+		4E0AC87C23EA0B9200A3F802 /* CalendarTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AC87B23EA0B9200A3F802 /* CalendarTwoViewController.swift */; };
 		4E42300923E8E12E0037EC23 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E42300823E8E12E0037EC23 /* Calendar.storyboard */; };
-		4E42300B23E8E16F0037EC23 /* CalendarVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E42300A23E8E16F0037EC23 /* CalendarVar.swift */; };
-		4E42300D23E8E17B0037EC23 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E42300C23E8E17B0037EC23 /* CalendarViewController.swift */; };
-		4E42300F23E8E18B0037EC23 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E42300E23E8E18A0037EC23 /* DateCollectionViewCell.swift */; };
 		5547F09C23E769120000E337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547F09B23E769120000E337 /* AppDelegate.swift */; };
 		5547F09E23E769120000E337 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547F09D23E769120000E337 /* SceneDelegate.swift */; };
 		5547F0A023E769120000E337 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547F09F23E769120000E337 /* ViewController.swift */; };
@@ -27,10 +28,11 @@
 /* Begin PBXFileReference section */
 		4E0AC87023E9D68000A3F802 /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
 		4E0AC87323E9D76600A3F802 /* ThemeSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettingsViewController.swift; sourceTree = "<group>"; };
+		4E0AC87523EA0A2D00A3F802 /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
+		4E0AC87723EA0A5700A3F802 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		4E0AC87923EA0B5A00A3F802 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		4E0AC87B23EA0B9200A3F802 /* CalendarTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTwoViewController.swift; sourceTree = "<group>"; };
 		4E42300823E8E12E0037EC23 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
-		4E42300A23E8E16F0037EC23 /* CalendarVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVar.swift; sourceTree = "<group>"; };
-		4E42300C23E8E17B0037EC23 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		4E42300E23E8E18A0037EC23 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		5547F09823E769120000E337 /* myPill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myPill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5547F09B23E769120000E337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5547F09D23E769120000E337 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,10 +69,11 @@
 		4E42301023E8E1BE0037EC23 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				4E42300E23E8E18A0037EC23 /* DateCollectionViewCell.swift */,
-				4E42300C23E8E17B0037EC23 /* CalendarViewController.swift */,
-				4E42300A23E8E16F0037EC23 /* CalendarVar.swift */,
 				4E42300823E8E12E0037EC23 /* Calendar.storyboard */,
+				4E0AC87523EA0A2D00A3F802 /* WeekdaysView.swift */,
+				4E0AC87723EA0A5700A3F802 /* CalendarView.swift */,
+				4E0AC87923EA0B5A00A3F802 /* MonthView.swift */,
+				4E0AC87B23EA0B9200A3F802 /* CalendarTwoViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -199,16 +202,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5547F0A023E769120000E337 /* ViewController.swift in Sources */,
+				4E0AC87623EA0A2D00A3F802 /* WeekdaysView.swift in Sources */,
 				4E0AC87423E9D76600A3F802 /* ThemeSettingsViewController.swift in Sources */,
 				5547F09C23E769120000E337 /* AppDelegate.swift in Sources */,
 				5547F0B823E8CD900000E337 /* BCTableViewController.swift in Sources */,
 				4E0AC87123E9D68000A3F802 /* ThemeHelper.swift in Sources */,
-				4E42300F23E8E18B0037EC23 /* DateCollectionViewCell.swift in Sources */,
+				4E0AC87823EA0A5700A3F802 /* CalendarView.swift in Sources */,
 				5547F0B523E8C9CD0000E337 /* BirthControl.swift in Sources */,
 				5547F0B223E8C6AC0000E337 /* BCTableViewCell.swift in Sources */,
-				4E42300D23E8E17B0037EC23 /* CalendarViewController.swift in Sources */,
 				5547F09E23E769120000E337 /* SceneDelegate.swift in Sources */,
-				4E42300B23E8E16F0037EC23 /* CalendarVar.swift in Sources */,
+				4E0AC87C23EA0B9200A3F802 /* CalendarTwoViewController.swift in Sources */,
+				4E0AC87A23EA0B5A00A3F802 /* MonthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,10 +14,6 @@ class BirthControl {
     var hasTaken: Bool
     
     init(name: String, hasTaken: Bool) {
-        
-        guard !name.isEmpty else {
-            return nil
-        }
         self.name = name
         self.hasTaken = hasTaken
     }

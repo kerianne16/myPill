@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G3y-gJ-Yur">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L57-pc-zxe">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -11,13 +11,13 @@
         <!--Calendar View Controller-->
         <scene sceneID="4Hr-y6-1Q4">
             <objects>
-                <viewController id="G3y-gJ-Yur" customClass="CalendarViewController" customModule="myPill" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calendar" id="G3y-gJ-Yur" customClass="CalendarViewController" customModule="myPill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4F8-ny-tja">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="0Kd-2D-93w">
-                                <rect key="frame" x="20" y="69.999999999999972" width="374" height="436.33333333333326"/>
+                                <rect key="frame" x="20" y="113.99999999999997" width="374" height="392.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="132" translatesAutoresizingMaskIntoConstraints="NO" id="ICW-c1-0T8">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -96,7 +96,7 @@
                                         </subviews>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lOM-ZG-n6W">
-                                        <rect key="frame" x="0.0" y="118.33333333333337" width="374" height="318"/>
+                                        <rect key="frame" x="0.0" y="118.33333333333334" width="374" height="274"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="Xzp-Ob-Vhf">
                                             <size key="itemSize" width="40" height="40"/>
@@ -193,12 +193,31 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Rk-p1-Fre"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hWb-fR-V9w"/>
                     <connections>
                         <outlet property="Calender" destination="lOM-ZG-n6W" id="WHt-1L-Zjn"/>
                         <outlet property="MonthLabel" destination="uz8-ui-jnY" id="9hx-fV-tKD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2JJ-aG-aO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.85507246376824" y="59.598214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cwE-3e-rfB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L57-pc-zxe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UtX-ui-0dU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="G3y-gJ-Yur" kind="relationship" relationship="rootViewController" id="Xgw-zb-Ce7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyR-2s-5Q6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="79.710144927536234" y="59.598214285714285"/>
         </scene>

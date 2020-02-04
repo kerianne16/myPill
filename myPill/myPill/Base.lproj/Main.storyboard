@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U1t-LW-oaS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U1t-LW-oaS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -87,45 +87,38 @@
             </objects>
             <point key="canvasLocation" x="2594.202898550725" y="-12.053571428571429"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="11l-yT-jtO">
-            <objects>
-                <viewController id="5Ws-53-d5S" customClass="CalendarViewController" customModule="myPill" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ONs-xJ-hP6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="prl-uf-RCx"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="pencil" catalog="system" id="zb2-NF-gmq"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="egJ-Ev-Z1m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1559" y="751"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KGI-Cj-WP7">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="U1t-LW-oaS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O70-3G-YgU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="jSn-T6-TTa" kind="relationship" relationship="viewControllers" id="aXC-Ci-68i"/>
-                        <segue destination="5Ws-53-d5S" kind="relationship" relationship="viewControllers" id="hVZ-Dg-gcT"/>
                         <segue destination="oTf-0e-a36" kind="relationship" relationship="viewControllers" id="Gke-fN-4Mm"/>
+                        <segue destination="2J9-KG-ZEg" kind="relationship" relationship="viewControllers" id="L0q-2l-5Yc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wa6-lY-N3b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="853.62318840579712" y="-5.3571428571428568"/>
         </scene>
+        <!--Calendar-->
+        <scene sceneID="zCV-RD-6fo">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CalendarViewController" storyboardName="Calendar" id="2J9-KG-ZEg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="nlw-JF-9dw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xyr-b7-G7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="511"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="pencil" catalog="system" width="64" height="56"/>
         <image name="pencil.circle.fill" catalog="system" width="64" height="60"/>
         <image name="pencil.slash" catalog="system" width="64" height="56"/>
     </resources>

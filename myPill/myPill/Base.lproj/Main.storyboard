@@ -41,7 +41,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DwU-pW-bWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2763.768115942029" y="-5.3571428571428568"/>
+            <point key="canvasLocation" x="2687" y="-5"/>
         </scene>
         <!--settings-->
         <scene sceneID="AG5-po-184">
@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWc-Nx-JxN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3739.130434782609" y="-5.3571428571428568"/>
+            <point key="canvasLocation" x="3532" y="-5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KGI-Cj-WP7">
@@ -105,8 +105,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="B4G-sd-bpq" kind="relationship" relationship="viewControllers" id="aXC-Ci-68i"/>
                         <segue destination="2J9-KG-ZEg" kind="relationship" relationship="viewControllers" id="L0q-2l-5Yc"/>
+                        <segue destination="B4G-sd-bpq" kind="relationship" relationship="viewControllers" id="aXC-Ci-68i"/>
+                        <segue destination="26b-HY-n9W" kind="relationship" relationship="viewControllers" id="rxy-FD-Uyt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wa6-lY-N3b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -117,26 +118,101 @@
         <scene sceneID="zCV-RD-6fo">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="CalendarViewController" storyboardName="Calendar" id="2J9-KG-ZEg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="nlw-JF-9dw"/>
+                    <tabBarItem key="tabBarItem" title="calendar" image="calendar" catalog="system" selectedImage="calendar" id="nlw-JF-9dw"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xyr-b7-G7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="511"/>
+            <point key="canvasLocation" x="854" y="581"/>
         </scene>
-        <!--View Controller-->
+        <!--settings-->
         <scene sceneID="5yz-lc-EnV">
             <objects>
                 <viewController id="26b-HY-n9W" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NBQ-Sh-Rxy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="M3C-IG-DKZ">
+                                <rect key="frame" x="141" y="274" width="129.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRa-NZ-6mU">
+                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BsS-Sm-G8J">
+                                        <rect key="frame" x="80.5" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="Rga-OT-9EC">
+                                <rect key="frame" x="141" y="325" width="129.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Black" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nF-yW-VtQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hph-bH-5V7">
+                                        <rect key="frame" x="80.5" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="h3C-Z8-WML">
+                                <rect key="frame" x="141" y="376" width="129.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="White" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgA-CW-vlt">
+                                        <rect key="frame" x="0.0" y="0.0" width="42.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftO-vs-71v">
+                                        <rect key="frame" x="80.5" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0Z-sc-eF9">
+                                <rect key="frame" x="147" y="228.5" width="117" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpP-GY-Cnf">
+                                <rect key="frame" x="140" y="123.5" width="135" height="49"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="abB-Mu-bvs" firstAttribute="trailing" secondItem="h3C-Z8-WML" secondAttribute="trailing" constant="143.5" id="0X6-eH-d0G"/>
+                            <constraint firstItem="UpP-GY-Cnf" firstAttribute="leading" secondItem="abB-Mu-bvs" secondAttribute="leading" constant="140" id="3gP-KD-ddD"/>
+                            <constraint firstItem="h3C-Z8-WML" firstAttribute="leading" secondItem="abB-Mu-bvs" secondAttribute="leading" constant="141" id="7MY-Z3-bI8"/>
+                            <constraint firstItem="abB-Mu-bvs" firstAttribute="trailing" secondItem="Rga-OT-9EC" secondAttribute="trailing" constant="143.5" id="7PD-HT-M2z"/>
+                            <constraint firstItem="M3C-IG-DKZ" firstAttribute="top" secondItem="K0Z-sc-eF9" secondAttribute="bottom" constant="25" id="8aU-sh-Sq4"/>
+                            <constraint firstItem="abB-Mu-bvs" firstAttribute="trailing" secondItem="M3C-IG-DKZ" secondAttribute="trailing" constant="143.5" id="9jb-4g-2f6"/>
+                            <constraint firstItem="UpP-GY-Cnf" firstAttribute="top" secondItem="abB-Mu-bvs" secondAttribute="top" constant="79.5" id="Hqw-be-Fen"/>
+                            <constraint firstItem="M3C-IG-DKZ" firstAttribute="leading" secondItem="abB-Mu-bvs" secondAttribute="leading" constant="141" id="KGn-HF-Odz"/>
+                            <constraint firstItem="K0Z-sc-eF9" firstAttribute="leading" secondItem="abB-Mu-bvs" secondAttribute="leading" constant="147" id="Q08-Nl-QVa"/>
+                            <constraint firstItem="abB-Mu-bvs" firstAttribute="trailing" secondItem="K0Z-sc-eF9" secondAttribute="trailing" constant="150" id="Zp9-lI-hce"/>
+                            <constraint firstItem="abB-Mu-bvs" firstAttribute="trailing" secondItem="UpP-GY-Cnf" secondAttribute="trailing" constant="139" id="b7L-QR-yqA"/>
+                            <constraint firstItem="K0Z-sc-eF9" firstAttribute="top" secondItem="UpP-GY-Cnf" secondAttribute="bottom" constant="56" id="gor-uQ-RD2"/>
+                            <constraint firstItem="abB-Mu-bvs" firstAttribute="bottom" secondItem="h3C-Z8-WML" secondAttribute="bottom" constant="406" id="nEP-5g-dWP"/>
+                            <constraint firstItem="h3C-Z8-WML" firstAttribute="top" secondItem="Rga-OT-9EC" secondAttribute="bottom" constant="20" id="sqU-J3-EZY"/>
+                            <constraint firstItem="Rga-OT-9EC" firstAttribute="top" secondItem="M3C-IG-DKZ" secondAttribute="bottom" constant="20" id="tRv-dH-sW2"/>
+                            <constraint firstItem="Rga-OT-9EC" firstAttribute="leading" secondItem="abB-Mu-bvs" secondAttribute="leading" constant="141" id="zoY-CC-Jkr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="abB-Mu-bvs"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="settings" image="gear" catalog="system" id="6Qh-wF-xTx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ldb-LS-wKG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1846" y="759"/>
+            <point key="canvasLocation" x="1828" y="873"/>
         </scene>
         <!--myPill-->
         <scene sceneID="6rI-WN-Qpz">
@@ -155,7 +231,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EB6-JG-KE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1853.6231884057972" y="-5.3571428571428568"/>
+            <point key="canvasLocation" x="1881" y="-5"/>
         </scene>
     </scenes>
     <resources>

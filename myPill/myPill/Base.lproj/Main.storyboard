@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Table View Controller-->
         <scene sceneID="BhT-De-bVD">
             <objects>
                 <tableViewController id="jSn-T6-TTa" sceneMemberID="viewController">
@@ -30,14 +30,20 @@
                             <outlet property="delegate" destination="jSn-T6-TTa" id="KbA-RL-2Af"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="pencil.circle.fill" catalog="system" id="lNI-lo-Od3"/>
+                    <navigationItem key="navigationItem" id="liM-Xh-5w6">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="PHb-kl-Ytp">
+                            <connections>
+                                <segue destination="oTf-0e-a36" kind="show" id="qud-Li-bNy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DwU-pW-bWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855" y="-5"/>
+            <point key="canvasLocation" x="2763.768115942029" y="-5.3571428571428568"/>
         </scene>
-        <!--Item-->
+        <!--settings-->
         <scene sceneID="AG5-po-184">
             <objects>
                 <viewController id="oTf-0e-a36" customClass="ViewController" customModule="myPill" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +52,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-i7-yKS">
-                                <rect key="frame" x="20" y="122" width="178" height="100.5"/>
+                                <rect key="frame" x="20" y="166" width="178" height="100.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your birth control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-JV-WV4">
                                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="20.5"/>
@@ -77,7 +83,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lmb-or-2WR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="pencil.slash" catalog="system" id="Buk-OP-xNp"/>
+                    <tabBarItem key="tabBarItem" title="settings" image="pencil.slash" catalog="system" selectedImage="gear" id="Buk-OP-xNp"/>
+                    <navigationItem key="navigationItem" id="MKg-NY-05z"/>
                     <connections>
                         <outlet property="bcLabel" destination="LZg-JV-WV4" id="Vv2-Sz-6iV"/>
                         <outlet property="bcNameTextfield" destination="zX8-dn-t1V" id="iXh-JE-O56"/>
@@ -85,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWc-Nx-JxN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2594.202898550725" y="-12.053571428571429"/>
+            <point key="canvasLocation" x="3739.130434782609" y="-5.3571428571428568"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KGI-Cj-WP7">
@@ -98,8 +105,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="jSn-T6-TTa" kind="relationship" relationship="viewControllers" id="aXC-Ci-68i"/>
-                        <segue destination="oTf-0e-a36" kind="relationship" relationship="viewControllers" id="Gke-fN-4Mm"/>
+                        <segue destination="B4G-sd-bpq" kind="relationship" relationship="viewControllers" id="aXC-Ci-68i"/>
                         <segue destination="2J9-KG-ZEg" kind="relationship" relationship="viewControllers" id="L0q-2l-5Yc"/>
                     </connections>
                 </tabBarController>
@@ -111,15 +117,52 @@
         <scene sceneID="zCV-RD-6fo">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="CalendarViewController" storyboardName="Calendar" id="2J9-KG-ZEg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nlw-JF-9dw"/>
+                    <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="nlw-JF-9dw"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xyr-b7-G7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="854" y="511"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="5yz-lc-EnV">
+            <objects>
+                <viewController id="26b-HY-n9W" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NBQ-Sh-Rxy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="abB-Mu-bvs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ldb-LS-wKG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1846" y="759"/>
+        </scene>
+        <!--myPill-->
+        <scene sceneID="6rI-WN-Qpz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B4G-sd-bpq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="myPill" image="moon.circle.fill" catalog="system" selectedImage="moon.circle.fill" id="lNI-lo-Od3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uJG-RO-S68">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jSn-T6-TTa" kind="relationship" relationship="rootViewController" id="jVJ-XR-aEt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EB6-JG-KE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.6231884057972" y="-5.3571428571428568"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="pencil.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="moon.circle.fill" catalog="system" width="64" height="60"/>
         <image name="pencil.slash" catalog="system" width="64" height="56"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>

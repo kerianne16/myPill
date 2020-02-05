@@ -11,11 +11,9 @@ import UIKit
 class BirthControl {
     
     var name: String
-    var hasTaken: Bool
     
-    init(name: String, hasTaken: Bool) {
+    init(name: String) {
         self.name = name
-        self.hasTaken = hasTaken
     }
 }
 

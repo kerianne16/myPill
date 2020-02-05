@@ -7,15 +7,20 @@
 //
 
 import UIKit
-
+protocol AddBCDelegate {
+    func bcWasAdded(_ bc: BirthControl)
+}
 class ViewController: UIViewController, UITextFieldDelegate {
     //MARK: Properties
     @IBOutlet weak var bcNameTextfield: UITextField!
     @IBOutlet weak var bcLabel: UILabel!
-   
+    
+    var delegate: AddBCDelegate?
+    var bcController: BirthController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        bcNameTextfield.delegate = self
+    
     }
 
     //MARK: UITextFieldDelegate
@@ -26,14 +31,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
           return true
       }
       
-      func textFieldDidEndEditing(_ textField: UITextField) {
-          bcLabel.text = textField.text
-      }
     //MARK: Actions
      @IBAction func addButton(_ sender: UIButton) {
-        bcLabel.text = "Default Text"
+        guard let name = bcNameTextfield.text, !name.isEmpty else { return }
+        bcController?.createBirthControl(name: name)
+       
+      //  delegate?.bcWasAdded(bc)
      }
-    
-
 }
 

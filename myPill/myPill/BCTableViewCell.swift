@@ -10,15 +10,16 @@ import UIKit
 
 class BCTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var birthControlLabel: UILabel!
+    
+    var birthcontrolz: BirthControl? {
+        didSet {
+            updateViews()
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    private func updateViews() {
+        guard let birthcontrol = birthcontrolz
+            else { return }
+        birthControlLabel.text = birthcontrol.name
     }
-
 }

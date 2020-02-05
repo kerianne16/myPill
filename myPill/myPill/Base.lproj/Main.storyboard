@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U1t-LW-oaS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U1t-LW-oaS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,19 +10,36 @@
         <!--Table View Controller-->
         <scene sceneID="BhT-De-bVD">
             <objects>
-                <tableViewController id="jSn-T6-TTa" sceneMemberID="viewController">
+                <tableViewController id="jSn-T6-TTa" customClass="BCTableViewController" customModule="myPill" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q0f-ud-0gH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BCTableViewCell" id="Yyn-aK-7B2" customClass="BCTableViewCell" customModule="myPill" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BCCell" id="Yyn-aK-7B2" customClass="BCTableViewCell" customModule="myPill" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yyn-aK-7B2" id="p0m-Ax-jva">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nb-Bt-uLP">
+                                            <rect key="frame" x="20" y="11" width="92" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1nb-Bt-uLP" firstAttribute="leading" secondItem="p0m-Ax-jva" secondAttribute="leadingMargin" id="Gof-Mk-oxL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1nb-Bt-uLP" secondAttribute="trailing" constant="282" id="b6k-1r-TbP"/>
+                                        <constraint firstItem="1nb-Bt-uLP" firstAttribute="top" secondItem="p0m-Ax-jva" secondAttribute="topMargin" id="mU8-Iy-489"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1nb-Bt-uLP" secondAttribute="bottom" constant="0.5" id="nb8-GA-U1m"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="birthControlLabel" destination="1nb-Bt-uLP" id="b9M-P2-4LZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,15 +50,18 @@
                     <navigationItem key="navigationItem" id="liM-Xh-5w6">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="PHb-kl-Ytp">
                             <connections>
-                                <segue destination="oTf-0e-a36" kind="show" id="qud-Li-bNy"/>
+                                <segue destination="oTf-0e-a36" kind="show" identifier="AddBcSegue" id="qud-Li-bNy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bcTableView" destination="q0f-ud-0gH" id="0dd-5B-ILy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DwU-pW-bWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2687" y="-5"/>
+            <point key="canvasLocation" x="2686.9565217391305" y="-5.3571428571428568"/>
         </scene>
         <!--settings-->
         <scene sceneID="AG5-po-184">
@@ -66,10 +86,10 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYj-7q-0Qq">
-                                        <rect key="frame" x="0.0" y="70.5" width="151" height="30"/>
-                                        <state key="normal" title="Set Deafult Label Text"/>
+                                        <rect key="frame" x="0.0" y="70.5" width="86" height="30"/>
+                                        <state key="normal" title="Press to add"/>
                                         <connections>
-                                            <action selector="addButton:" destination="oTf-0e-a36" eventType="touchUpInside" id="0Po-7l-YWT"/>
+                                            <action selector="addButton:" destination="oTf-0e-a36" eventType="touchUpInside" id="tSE-BD-jis"/>
                                         </connections>
                                     </button>
                                 </subviews>

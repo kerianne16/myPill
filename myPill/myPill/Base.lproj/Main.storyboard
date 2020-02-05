@@ -23,29 +23,28 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9kk-6V-rrH">
-                                            <rect key="frame" x="20" y="11" width="42" height="49"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1nb-Bt-uLP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XEe-6B-lvn">
-                                                    <rect key="frame" x="0.0" y="28.5" width="42" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="1nb-Bt-uLP">
+                                            <rect key="frame" x="20" y="11" width="195" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="XEe-6B-lvn">
+                                            <rect key="frame" x="20" y="40" width="195" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="9kk-6V-rrH" secondAttribute="trailing" constant="332" id="4de-mM-8su"/>
-                                        <constraint firstItem="9kk-6V-rrH" firstAttribute="top" secondItem="p0m-Ax-jva" secondAttribute="topMargin" id="Bn3-vL-aCk"/>
-                                        <constraint firstItem="9kk-6V-rrH" firstAttribute="leading" secondItem="p0m-Ax-jva" secondAttribute="leadingMargin" id="QEL-CO-ck8"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="9kk-6V-rrH" secondAttribute="bottom" constant="1" id="dbr-Vn-nnC"/>
+                                        <constraint firstItem="XEe-6B-lvn" firstAttribute="leading" secondItem="p0m-Ax-jva" secondAttribute="leadingMargin" id="84J-uH-bL5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1nb-Bt-uLP" secondAttribute="trailing" constant="179" id="88u-ac-bZS"/>
+                                        <constraint firstItem="1nb-Bt-uLP" firstAttribute="leading" secondItem="p0m-Ax-jva" secondAttribute="leadingMargin" id="Mfu-gs-uPS"/>
+                                        <constraint firstItem="1nb-Bt-uLP" firstAttribute="top" secondItem="p0m-Ax-jva" secondAttribute="topMargin" id="Xhm-Nu-F9o"/>
+                                        <constraint firstItem="XEe-6B-lvn" firstAttribute="top" secondItem="1nb-Bt-uLP" secondAttribute="bottom" constant="8" id="bn7-wD-Tsu"/>
+                                        <constraint firstItem="XEe-6B-lvn" firstAttribute="bottom" secondItem="p0m-Ax-jva" secondAttribute="bottomMargin" id="cBu-Ib-6HY"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="XEe-6B-lvn" secondAttribute="trailing" constant="179" id="e5g-kd-JLt"/>
+                                        <constraint firstItem="XEe-6B-lvn" firstAttribute="top" secondItem="1nb-Bt-uLP" secondAttribute="bottom" constant="8" id="zGb-Hw-eVE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

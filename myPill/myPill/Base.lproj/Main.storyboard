@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Track Birth Control-->
         <scene sceneID="BhT-De-bVD">
             <objects>
                 <tableViewController id="jSn-T6-TTa" customClass="BCTableViewController" customModule="myPill" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,7 +58,7 @@
                             <outlet property="delegate" destination="jSn-T6-TTa" id="KbA-RL-2Af"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="liM-Xh-5w6">
+                    <navigationItem key="navigationItem" title="Track Birth Control" id="liM-Xh-5w6">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="PHb-kl-Ytp">
                             <connections>
                                 <segue destination="oTf-0e-a36" kind="show" identifier="AddBcSegue" id="qud-Li-bNy"/>
@@ -85,14 +85,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4PO-DH-6tD">
                                 <rect key="frame" x="47" y="260.5" width="320" height="375.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your birth control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-JV-WV4">
-                                        <rect key="frame" x="76.5" y="0.0" width="167.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add when you've taken your birth control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-JV-WV4">
+                                        <rect key="frame" x="3.5" y="0.0" width="313.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your birth control" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zX8-dn-t1V">
-                                        <rect key="frame" x="71" y="45.5" width="178" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter adminstration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zX8-dn-t1V">
+                                        <rect key="frame" x="83" y="45.5" width="154.5" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>

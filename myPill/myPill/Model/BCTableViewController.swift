@@ -13,8 +13,7 @@ class BCTableViewController: UITableViewController {
     @IBOutlet var bcTableView: UITableView!
     
     //MARK: Properties
-let bcController = BirthController()
-
+ var birthControls = [BirthControl]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +26,14 @@ let bcController = BirthController()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bcController.birthControl.count
+        return birthControls.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BCCell", for: indexPath) as? BCTableViewCell else { return UITableViewCell() }
 
-        let bc = bcController.birthControl[indexPath.row]
+        let bc = birthControls[indexPath.row]
         cell.birthcontrolz = bc
 
         return cell
@@ -42,7 +41,7 @@ let bcController = BirthController()
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddBCSegue" {
+        if segue.identifier == "AddBcSegue" {
             if let vc = segue.destination as? ViewController {
                 vc.delegate = self
             }
@@ -51,7 +50,7 @@ let bcController = BirthController()
 }
 extension BCTableViewController: AddBCDelegate {
     func bcWasAdded(_ bc: BirthControl) {
-        //birthControl.append(bc)
+        birthControls.append(bc)
         dismiss(animated: true, completion: nil)
         tableView.reloadData()
     }

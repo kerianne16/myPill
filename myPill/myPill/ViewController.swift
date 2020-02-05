@@ -34,9 +34,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //MARK: Actions
      @IBAction func addButton(_ sender: UIButton) {
         guard let name = bcNameTextfield.text, !name.isEmpty else { return }
-        bcController?.createBirthControl(name: name)
+        let bc = BirthControl(name: name)
+       // bcController?.createBirthControl(name: name)
        
-      //  delegate?.bcWasAdded(bc)
+       delegate?.bcWasAdded(bc)
      }
 }
 

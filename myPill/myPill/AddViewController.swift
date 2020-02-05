@@ -10,11 +10,13 @@ import UIKit
 protocol AddBCDelegate {
     func bcWasAdded(_ bc: BirthControl)
 }
-class ViewController: UIViewController, UITextFieldDelegate {
+class AddViewController: UIViewController, UITextFieldDelegate {
     //MARK: Properties
     @IBOutlet weak var bcNameTextfield: UITextField!
     @IBOutlet weak var bcLabel: UILabel!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+
     var delegate: AddBCDelegate?
     var bcController: BirthController?
 
@@ -32,12 +34,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
       }
       
     //MARK: Actions
+    
      @IBAction func addButton(_ sender: UIButton) {
         guard let name = bcNameTextfield.text, !name.isEmpty else { return }
-        let bc = BirthControl(name: name)
-       // bcController?.createBirthControl(name: name)
-       
-       delegate?.bcWasAdded(bc)
+      
+        bcController?.createBirthControl(name: name, date: datePicker.date)
+        navigationController?.popViewController(animated: true)
      }
+    
+
 }
 

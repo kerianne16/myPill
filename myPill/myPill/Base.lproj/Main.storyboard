@@ -16,29 +16,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BCCell" id="Yyn-aK-7B2" customClass="BCTableViewCell" customModule="myPill" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BCCell" rowHeight="72" id="Yyn-aK-7B2" customClass="BCTableViewCell" customModule="myPill" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yyn-aK-7B2" id="p0m-Ax-jva">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nb-Bt-uLP">
-                                            <rect key="frame" x="20" y="11" width="92" height="21.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9kk-6V-rrH">
+                                            <rect key="frame" x="20" y="11" width="42" height="49"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1nb-Bt-uLP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XEe-6B-lvn">
+                                                    <rect key="frame" x="0.0" y="28.5" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="1nb-Bt-uLP" firstAttribute="leading" secondItem="p0m-Ax-jva" secondAttribute="leadingMargin" id="Gof-Mk-oxL"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="1nb-Bt-uLP" secondAttribute="trailing" constant="282" id="b6k-1r-TbP"/>
-                                        <constraint firstItem="1nb-Bt-uLP" firstAttribute="top" secondItem="p0m-Ax-jva" secondAttribute="topMargin" id="mU8-Iy-489"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="1nb-Bt-uLP" secondAttribute="bottom" constant="0.5" id="nb8-GA-U1m"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="9kk-6V-rrH" secondAttribute="trailing" constant="332" id="4de-mM-8su"/>
+                                        <constraint firstItem="9kk-6V-rrH" firstAttribute="top" secondItem="p0m-Ax-jva" secondAttribute="topMargin" id="Bn3-vL-aCk"/>
+                                        <constraint firstItem="9kk-6V-rrH" firstAttribute="leading" secondItem="p0m-Ax-jva" secondAttribute="leadingMargin" id="QEL-CO-ck8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="9kk-6V-rrH" secondAttribute="bottom" constant="1" id="dbr-Vn-nnC"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="birthControlLabel" destination="1nb-Bt-uLP" id="b9M-P2-4LZ"/>
+                                    <outlet property="dateLabel" destination="XEe-6B-lvn" id="IRt-kp-5Jv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -66,30 +78,33 @@
         <!--settings-->
         <scene sceneID="AG5-po-184">
             <objects>
-                <viewController id="oTf-0e-a36" customClass="ViewController" customModule="myPill" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oTf-0e-a36" customClass="AddViewController" customModule="myPill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AdN-Eg-xzM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-i7-yKS">
-                                <rect key="frame" x="20" y="166" width="178" height="100.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4PO-DH-6tD">
+                                <rect key="frame" x="47" y="260.5" width="320" height="375.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your birth control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-JV-WV4">
-                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="20.5"/>
+                                        <rect key="frame" x="76.5" y="0.0" width="167.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your birth control" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zX8-dn-t1V">
-                                        <rect key="frame" x="0.0" y="28.5" width="178" height="34"/>
+                                        <rect key="frame" x="71" y="45.5" width="178" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ubo-Uk-M7W">
+                                        <rect key="frame" x="0.0" y="105" width="320" height="216"/>
+                                    </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYj-7q-0Qq">
-                                        <rect key="frame" x="0.0" y="70.5" width="86" height="30"/>
+                                        <rect key="frame" x="117" y="345.5" width="86" height="30"/>
                                         <state key="normal" title="Press to add"/>
                                         <connections>
-                                            <action selector="addButton:" destination="oTf-0e-a36" eventType="touchUpInside" id="tSE-BD-jis"/>
+                                            <action selector="addButton:" destination="oTf-0e-a36" eventType="touchUpInside" id="Cdt-iq-iDb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -97,9 +112,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Lmb-or-2WR" firstAttribute="trailing" secondItem="CuE-i7-yKS" secondAttribute="trailing" constant="216" id="DH9-l1-ctv"/>
-                            <constraint firstItem="CuE-i7-yKS" firstAttribute="leading" secondItem="Lmb-or-2WR" secondAttribute="leading" constant="20" id="UYx-t4-iFg"/>
-                            <constraint firstItem="CuE-i7-yKS" firstAttribute="top" secondItem="Lmb-or-2WR" secondAttribute="top" constant="78" id="ZbK-n9-SSx"/>
+                            <constraint firstItem="4PO-DH-6tD" firstAttribute="centerX" secondItem="AdN-Eg-xzM" secondAttribute="centerX" id="4Ie-2G-yLz"/>
+                            <constraint firstItem="4PO-DH-6tD" firstAttribute="centerY" secondItem="AdN-Eg-xzM" secondAttribute="centerY" id="WmL-S0-Egi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lmb-or-2WR"/>
                     </view>
@@ -108,6 +122,7 @@
                     <connections>
                         <outlet property="bcLabel" destination="LZg-JV-WV4" id="Vv2-Sz-6iV"/>
                         <outlet property="bcNameTextfield" destination="zX8-dn-t1V" id="iXh-JE-O56"/>
+                        <outlet property="datePicker" destination="Ubo-Uk-M7W" id="GbU-qN-rLE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWc-Nx-JxN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

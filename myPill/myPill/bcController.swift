@@ -13,8 +13,8 @@ class BirthController {
     
     var birthControl = [BirthControl]()
     
-    func createBirthControl(name: String) {
-        let newBC = BirthControl(name: name)
+    func createBirthControl(name: String, date: Date) {
+        let newBC = BirthControl(name: name, date: date)
         birthControl.append(newBC)
     }
     

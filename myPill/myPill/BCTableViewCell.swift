@@ -11,15 +11,24 @@ import UIKit
 class BCTableViewCell: UITableViewCell {
 
     @IBOutlet weak var birthControlLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
-    var birthcontrolz: BirthControl? {
+    var birthControl: BirthControl? {
         didSet {
             updateViews()
         }
     }
     private func updateViews() {
-        guard let birthcontrol = birthcontrolz
+        guard let birthControl = birthControl
             else { return }
-        birthControlLabel.text = birthcontrol.name
+        birthControlLabel.text = birthControl.name
+        dateLabel.text = dateFormatter(date: birthControl.date)
     }
+    
+    func dateFormatter(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MMM-HH:ss"
+        return dateFormatter.string(from: date)
+    }
+    
 }

@@ -13,11 +13,23 @@ class BCTableViewController: UITableViewController {
     @IBOutlet var bcTableView: UITableView!
     
     //MARK: Properties
- var birthControls = [BirthControl]()
+    
+    var dateFormatter = DateFormatter()
+    let birthController = BirthController()
+    let locale = NSLocale.current
     
     override func viewDidLoad() {
         super.viewDidLoad()
      //   print(birthControl)
+        dateFormatter.locale = locale
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -26,32 +38,27 @@ class BCTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return birthControls.count
+        return birthController.birthControl.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BCCell", for: indexPath) as? BCTableViewCell else { return UITableViewCell() }
 
-        let bc = birthControls[indexPath.row]
-        cell.birthcontrolz = bc
-
+        let bc = birthController.birthControl[indexPath.row]
+        cell.birthControl = bc
+    //  cell for date picker
+        
         return cell
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddBcSegue" {
-            if let vc = segue.destination as? ViewController {
-                vc.delegate = self
+            if let vc = segue.destination as? AddViewController {
+                vc.bcController = birthController
             }
         }
     }
 }
-extension BCTableViewController: AddBCDelegate {
-    func bcWasAdded(_ bc: BirthControl) {
-        birthControls.append(bc)
-        dismiss(animated: true, completion: nil)
-        tableView.reloadData()
-    }
-}
+

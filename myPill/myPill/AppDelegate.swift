@@ -14,12 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let center = UNUserNotificationCenter.current()
+        let options: UNAuthorizationOptions = [.alert, .badge, .sound]
+        center.requestAuthorization(options: options) { (granted, error) in
+            if granted {
+                application.registerForRemoteNotifications()
+            }
+        }
         // Override point for customization after application launch.
      self.window = UIWindow(frame: UIScreen.main.bounds)
             if let window = self.window {
                 window.backgroundColor = UIColor.white
                 let nav = UINavigationController()
-                let mainView = ViewController()
+                let mainView = AddViewController()
                 nav.viewControllers = [mainView]
                 window.rootViewController = nav
                 window.makeKeyAndVisible()

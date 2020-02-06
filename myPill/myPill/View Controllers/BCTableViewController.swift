@@ -58,7 +58,7 @@ class BCTableViewController: UITableViewController {
        case "Dark":
         backgroundColor = .darkGray 
        case "Pink":
-        backgroundColor = .systemPink
+        backgroundColor = UIColor(hue: 0.8472, saturation: 0.31, brightness: 0.92, alpha: 1.0)
         default:
         backgroundColor = .white
         }

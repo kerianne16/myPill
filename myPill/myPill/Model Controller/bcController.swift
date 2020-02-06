@@ -16,7 +16,5 @@ class BirthController {
     func createBirthControl(name: String, date: Date) {
         let newBC = BirthControl(name: name, date: date)
         birthControl.append(newBC)
-    }
-    
-    
+    }        
 }

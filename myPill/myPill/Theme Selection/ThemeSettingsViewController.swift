@@ -18,7 +18,6 @@ class ThemeSettingsViewController: UIViewController {
         updateViews()
     }
     @IBAction func selectWhiteTheme(_ sender: Any) {
-    //    UserDefaults.standard.set(ThemeHelper.PropertyKeys.white, forKey: .themePreference)
         themeHelper.setThemePreferenceToWhite()
         pinkSwitch.isOn = false
         darkSwitch.isOn = false
@@ -27,7 +26,6 @@ class ThemeSettingsViewController: UIViewController {
     }
     
         @IBAction func selectDarkTheme(_ sender: Any) {
-         //   UserDefaults.standard.set(ThemeHelper.PropertyKeys.dark, forKey: .themePreference)
             themeHelper.setThemePreferenceToDark()
             whiteSwitch.isOn = false
             pinkSwitch.isOn = false
@@ -36,7 +34,6 @@ class ThemeSettingsViewController: UIViewController {
         
         
         @IBAction func selectPinkTheme(_ sender: Any) {
-         //   UserDefaults.standard.set(ThemeHelper.PropertyKeys.pink, forKey: .themePreference)
             themeHelper.setThemePreferenceToPink()
             whiteSwitch.isOn = false
             darkSwitch.isOn = false
@@ -51,7 +48,7 @@ class ThemeSettingsViewController: UIViewController {
             case "Pink":
                 pinkSwitch.isOn = true
             default:
-                break
+               break
             }
         
     }

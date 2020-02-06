@@ -32,41 +32,5 @@ class ThemeHelper {
      
     private let themePreferenceKey = "themePreference"
     }
-/*
-    struct PropertyKeys {
-        static let dark = "Dark"
-        static let pink = "Pink"
-        static let white = "White"
-    }*/
-     
-// needs to go into add pill view controller
-
-// func setTheme() {
-//    guard let themePreference = themeHelper?.themePreferenceKey else { return }
-//    switch themePreference {
-//    case ThemeHelper.PropertyKeys.dark:
-//        view.backgroundColor = .darkGray
-//    case ThemeHelper.PropertyKeys.pink:
-//        view.backgroundColor =
-//        .pink
-//    default:
-//        view.backgroundColor = .white
-//    }
-//}
-
-
-// needs to go into table cell view controller?
-//private func setTheme() {
-//   guard let themePreference = themeHelper.themePreferenceKey else { return }
-//   switch themePreference {
-//   case ThemeHelper.PropertyKeys.dark:
-//       collectionView.backgroundColor = .darkGray
-//case ThemeHelper.PropertyKeys.pink:
-//collectionView.backgroundColor = .pink
-//   default:
-//       collectionView.backgroundColor = .white
-//   }
-//}
-
-
+ 
 

@@ -50,7 +50,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     var presentMonthIndex = 0
     var presentYear = 0
     var todaysDate = 0
-    var firstWeekDayOfMonth = 0   //(Sunday-Saturday 1-7)
+    var firstWeekDayOfMonth = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -158,7 +158,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     
     func getFirstWeekDay() -> Int {
         let day = ("\(currentYear)-\(currentMonthIndex)-01".date?.firstDayOfTheMonth.weekday)!
-        //return day == 7 ? 1 : day
+      
         return day
     }
     

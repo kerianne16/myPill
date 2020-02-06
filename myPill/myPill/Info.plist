@@ -62,5 +62,11 @@
 	</array>
 	<key>NSCalendarsUsageDescription</key>
 	<string>This application needs access to your calender</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>appstore.png</string>
+	</array>
+	<key></key>
+	<string></string>
 </dict>
 </plist>

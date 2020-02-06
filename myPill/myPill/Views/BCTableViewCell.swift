@@ -30,7 +30,9 @@ class BCTableViewCell: UITableViewCell {
         dateFormatter.dateFormat = "dd-MMM-HH:ss"
         return dateFormatter.string(from: date)
     }
-   /*
+  
+    
+    /*
     var themeHelper: ThemeHelper?
 
     private func setTheme() {

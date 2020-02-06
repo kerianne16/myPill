@@ -42,19 +42,24 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         bcController?.createBirthControl(name: name, date: datePicker.date)
         navigationController?.popViewController(animated: true)
      }
-    
-    var themeHelper: ThemeHelper?
-    func setTheme() {
-        guard let themePreference = themeHelper?.themePreferenceKey else { return }
-       switch themePreference {
-       case ThemeHelper.PropertyKeys.dark:
-          view.backgroundColor = .darkGray
-    case ThemeHelper.PropertyKeys.pink:
-            view.backgroundColor = .systemPink
-      default:
-         view.backgroundColor = .white
-      }
-    }
+  func setTheme() {
+   
+     guard let themePreference = themeHelper.themePreference else { return }
+     var backgroundColor: UIColor!
+     
+     switch themePreference {
+         
+    case "Dark":
+        backgroundColor = .darkGray
+    case "Pink":
+     backgroundColor = .systemPink
+     default:
+     backgroundColor = .white
+     }
+     
+     view.backgroundColor = backgroundColor
+ }
 
+    let themeHelper = ThemeHelper()
 }
 

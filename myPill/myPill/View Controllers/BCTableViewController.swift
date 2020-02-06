@@ -21,12 +21,12 @@ class BCTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      //   print(birthControl)
-        setTheme()
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        setTheme()
         tableView.reloadData()
     }
 
@@ -46,6 +46,24 @@ class BCTableViewController: UITableViewController {
         cell.birthControl = bc
 
         return cell
+    }
+                
+     func setTheme() {
+      
+        guard let themePreference = themeHelper.themePreference else { return }
+        var backgroundColor: UIColor!
+        
+        switch themePreference {
+            
+       case "Dark":
+        backgroundColor = .darkGray 
+       case "Pink":
+        backgroundColor = .systemPink
+        default:
+        backgroundColor = .white
+        }
+        
+        view.backgroundColor = backgroundColor
     }
     
     // MARK: - Navigation
@@ -70,24 +88,11 @@ class BCTableViewController: UITableViewController {
                if let vc = segue.destination as? AddViewController {
                    vc.bcController = birthController
                } */
-    var themeHelper: ThemeHelper?
-     func setTheme() {
-       guard let themePreference = themeHelper?.themePreferenceKey else { return }
-        var backgroundColor: UIColor!
-        
-        switch themePreference {
-            
-       case ThemeHelper.PropertyKeys.dark:
-        backgroundColor = .darkGray
-       case ThemeHelper.PropertyKeys.pink:
-        backgroundColor = .systemPink
-        default:
-       backgroundColor = .white
-        }
-    }
     
+
+ let themeHelper = ThemeHelper()
+
 }
- 
 
 
 

@@ -252,6 +252,11 @@
                         <viewLayoutGuide key="safeArea" id="abB-Mu-bvs"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="settings" image="gear" catalog="system" id="6Qh-wF-xTx"/>
+                    <connections>
+                        <outlet property="darkSwitch" destination="hph-bH-5V7" id="FFs-MV-f2x"/>
+                        <outlet property="pinkSwitch" destination="BsS-Sm-G8J" id="24z-I0-ciG"/>
+                        <outlet property="whiteSwitch" destination="ftO-vs-71v" id="oYh-Wc-O3E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ldb-LS-wKG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -30,5 +30,19 @@ class BCTableViewCell: UITableViewCell {
         dateFormatter.dateFormat = "dd-MMM-HH:ss"
         return dateFormatter.string(from: date)
     }
-    
+   /*
+    var themeHelper: ThemeHelper?
+
+    private func setTheme() {
+      guard let themePreference = themeHelper.themePreferenceKey else { return }
+    switch themePreference {
+    case ThemeHelper.PropertyKeys.dark:
+        collectionView.backgroundColor = .darkGray
+    case ThemeHelper.PropertyKeys.pink:
+    collectionView.backgroundColor = .systemPink
+    default:
+          collectionView.backgroundColor = .white
+      }
+    }
+*/
 }

@@ -44,7 +44,7 @@
 		5547F0A923E769140000E337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5547F0B123E8C6AC0000E337 /* BCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCTableViewCell.swift; sourceTree = "<group>"; };
 		5547F0B423E8C9CD0000E337 /* BirthControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthControl.swift; sourceTree = "<group>"; };
-		5547F0B723E8CD900000E337 /* BCTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BCTableViewController.swift; path = Model/BCTableViewController.swift; sourceTree = "<group>"; };
+		5547F0B723E8CD900000E337 /* BCTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCTableViewController.swift; sourceTree = "<group>"; };
 		5547F0DC23EA40A70000E337 /* bcController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bcController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,20 +99,15 @@
 		5547F09A23E769120000E337 /* myPill */ = {
 			isa = PBXGroup;
 			children = (
+				5547F0B623E8C9D10000E337 /* Model */,
+				5547F0DE23EB81470000E337 /* Model Controller */,
+				5547F0DF23EB81CA0000E337 /* Views */,
+				5547F0E023EB81FD0000E337 /* View Controllers */,
 				4E42301023E8E1BE0037EC23 /* Calendar */,
 				4E0AC87223E9D71700A3F802 /* Theme Selection */,
-				5547F09B23E769120000E337 /* AppDelegate.swift */,
-				5547F09F23E769120000E337 /* AddViewController.swift */,
-				5547F09D23E769120000E337 /* SceneDelegate.swift */,
-				5547F0B723E8CD900000E337 /* BCTableViewController.swift */,
-				5547F0DC23EA40A70000E337 /* bcController.swift */,
-				5547F0B123E8C6AC0000E337 /* BCTableViewCell.swift */,
-				5547F0A423E769140000E337 /* Assets.xcassets */,
-				5547F0A923E769140000E337 /* Info.plist */,
-				5547F0B623E8C9D10000E337 /* Model */,
 				5547F0B323E8C6B80000E337 /* Storyboards */,
-				5547F0A123E769120000E337 /* Main.storyboard */,
-				5547F0A623E769140000E337 /* LaunchScreen.storyboard */,
+				5547F0E123EB82420000E337 /* Resources */,
+				5547F0A923E769140000E337 /* Info.plist */,
 			);
 			path = myPill;
 			sourceTree = "<group>";
@@ -120,6 +115,8 @@
 		5547F0B323E8C6B80000E337 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				5547F0A123E769120000E337 /* Main.storyboard */,
+				5547F0A623E769140000E337 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -130,6 +127,41 @@
 				5547F0B423E8C9CD0000E337 /* BirthControl.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5547F0DE23EB81470000E337 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5547F0DC23EA40A70000E337 /* bcController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		5547F0DF23EB81CA0000E337 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5547F0B123E8C6AC0000E337 /* BCTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5547F0E023EB81FD0000E337 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5547F09F23E769120000E337 /* AddViewController.swift */,
+				5547F0B723E8CD900000E337 /* BCTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5547F0E123EB82420000E337 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5547F09B23E769120000E337 /* AppDelegate.swift */,
+				5547F09D23E769120000E337 /* SceneDelegate.swift */,
+				5547F0A423E769140000E337 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

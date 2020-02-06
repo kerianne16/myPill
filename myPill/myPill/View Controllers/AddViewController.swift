@@ -11,10 +11,10 @@ protocol AddBCDelegate {
     func bcWasAdded(_ bc: BirthControl)
 }
 class AddViewController: UIViewController, UITextFieldDelegate {
+
     //MARK: Properties
     @IBOutlet weak var bcNameTextfield: UITextField!
     @IBOutlet weak var bcLabel: UILabel!
-    
     @IBOutlet weak var datePicker: UIDatePicker!
 
     var delegate: AddBCDelegate?
@@ -22,6 +22,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTheme()
     
     }
 
@@ -42,6 +43,18 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         navigationController?.popViewController(animated: true)
      }
     
+    var themeHelper: ThemeHelper?
+    func setTheme() {
+        guard let themePreference = themeHelper?.themePreferenceKey else { return }
+       switch themePreference {
+       case ThemeHelper.PropertyKeys.dark:
+          view.backgroundColor = .darkGray
+    case ThemeHelper.PropertyKeys.pink:
+            view.backgroundColor = .systemPink
+      default:
+         view.backgroundColor = .white
+      }
+    }
 
 }
 

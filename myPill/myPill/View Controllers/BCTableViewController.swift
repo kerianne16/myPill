@@ -21,9 +21,7 @@ class BCTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      //   print(birthControl)
-        dateFormatter.locale = locale
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .short
+        setTheme()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,24 +39,56 @@ class BCTableViewController: UITableViewController {
         return birthController.birthControl.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BCCell", for: indexPath) as? BCTableViewCell else { return UITableViewCell() }
 
         let bc = birthController.birthControl[indexPath.row]
         cell.birthControl = bc
-    //  cell for date picker
-        
+
         return cell
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddBcSegue" {
-            if let vc = segue.destination as? AddViewController {
+        switch segue.identifier {
+     
+        case "AddBcSegue":
+            if let vc = segue.destination as? AddViewController  {
                 vc.bcController = birthController
             }
+        case "ThemeSelector":
+             guard let destinationVC = segue.destination as? ThemeSettingsViewController else { return }
+            
+             destinationVC.themeHelper = themeHelper
+        default:
+            break
+        }
+            
+        }
+ /*
+     if segue.identifier == "AddBcSegue" {
+               if let vc = segue.destination as? AddViewController {
+                   vc.bcController = birthController
+               } */
+    var themeHelper: ThemeHelper?
+     func setTheme() {
+       guard let themePreference = themeHelper?.themePreferenceKey else { return }
+        var backgroundColor: UIColor!
+        
+        switch themePreference {
+            
+       case ThemeHelper.PropertyKeys.dark:
+        backgroundColor = .darkGray
+       case ThemeHelper.PropertyKeys.pink:
+        backgroundColor = .systemPink
+        default:
+       backgroundColor = .white
         }
     }
+    
 }
+ 
+
+
+
 
